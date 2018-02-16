@@ -117,3 +117,9 @@ func timeFromExcelTime(excelTime float64, date1904 bool) time.Time {
 	durationPart := time.Duration(dayNanoSeconds * floatPart)
 	return date.Add(durationDays).Add(durationPart)
 }
+
+// TimeFromExcelTime provides function to convert an excelTime representation
+// (stored as a floating point number) to a time.Time.
+func TimeFromExcelTime(excelTime float64, date1904 bool) time.Time {
+	return timeFromExcelTime(excelTime, date1904)
+}
